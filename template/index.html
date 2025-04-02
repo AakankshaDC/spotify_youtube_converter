@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify to YouTube Playlist Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Spotify to YouTube Music Converter</h1>
+        <form action="/" method="post">
+            <label for="spotify_url">Enter Spotify Playlist URL:</label>
+            <input type="text" id="spotify_url" name="spotify_url" required placeholder="https://open.spotify.com/playlist/...">
+            <button type="submit">Convert to YouTube Music</button>
+        </form>
+
+        {% if youtube_playlist_url %}
+            <div class="result">
+                <h2>Conversion Successful!</h2>
+                <p>Your YouTube Music playlist is ready:</p>
+                <a href="{{ youtube_playlist_url }}" target="_blank">Open YouTube Music Playlist</a>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
