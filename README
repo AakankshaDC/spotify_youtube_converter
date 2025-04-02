@@ -30,3 +30,12 @@ When running ytmusicapi oauth, it asks for Google YouTube Data API credentials. 
     a. When ytmusicapi oauth asks for Google YouTube Data API Client ID and Secret, enter the values from step 4.
 
 Once done, it will generate oauth.json, which is needed for authenticating YouTube Music API requests.
+
+## Install Dependencies 
+Run `pip3 install flask spotipy ytmusicapi`
+
+## Running the App
+```
+python app.py
+```
+Visit http://127.0.0.1:5000/ in your browser, enter a Spotify playlist URL, and click Submit.
